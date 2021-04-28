@@ -1,0 +1,135 @@
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+ background-color: antiquewhite;
+}
+
+
+.special{
+ position: relative;
+ height:100vh;
+ width:30vw;
+background-color: aquamarine;
+transition: transform linear 0.5s;
+transform: translateX(-30vw);
+}
+
+nav ul{
+ list-style-type: none;
+margin-top: 10px;
+}
+
+h2{
+padding: 18px;
+}
+
+nav ul li{
+ line-height: 3rem;
+}
+
+nav ul li a{
+ text-decoration: none;
+ margin-left: 10px;
+ font-size: large;
+  display: block;
+}
+
+nav ul li:hover{
+background-color: rgba(226, 97, 46, 0.383);
+
+}
+nav ul li a:hover{
+ color: yellow;
+ transition: linear 0.8s;
+ transform: translateX(20px);
+overflow: hidden;
+}
+
+#btn{
+ position:absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color:blue;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.show-sidebar {
+ transition: transform linear 0.5s;
+  transform: translate(0);
+  
+}
+/* so nav has add 1 class and the style will override on special */
+
+.hide-side{
+ transition: transform linear 0.5s;
+ transform: translate(-30vw);
+
+}
+.symbol{
+ color: blue;
+}
+
+.close-tab a{
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ color: red;
+ font-weight: bold;
+ font-size: 20px;
+ text-decoration: none;
+}
+
+.close-tab a:hover{
+ transition: transform linear 0.4s;
+ transform: rotate(360deg);
+}
+
+.footer{
+ display: flex;
+ flex-direction: row;
+ position: absolute;
+ bottom: 0;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: 3rem;
+}
+
+.footer a i{
+ margin: 0 10px;
+ 
+}
+
+.footer a i:hover{
+ transition: linear 0.5s;
+ transform: translateY(-10px);
+ color: blue;
+}
+/* 
+chua xong phan nay
+@media screen and (min-width: 600px){
+ btn{
+
+ }
+} */

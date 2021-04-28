@@ -1,0 +1,85 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+header {
+  text-transform: capitalize;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#special {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 620px;
+  text-align: center;
+}
+/* tìm hiểu về cách sử dụng text-align
+The text-align property specifies the horizontal alignment of text in an element.
+ */
+
+#special div {
+  background-color: white;
+  box-shadow: 5px 5px rgba(110, 109, 107, 0.205);
+  line-height: 4rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.one,
+.two,
+.three {
+  display: block;
+  font-size: larger;
+  position: relative;
+  border-radius: 9px;
+}
+
+.question-btn {
+  top: 1em;
+  right: 5px;
+  color: orange;
+  border: transparent;
+  font-size: 20px;
+  position: absolute;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.plus-icon {
+  display: inline;
+}
+
+.question-btn:hover {
+  transition: transform linear 0.2s;
+  transform: rotate(90deg);
+}
+/* Generally, inline elements may contain only data and other inline elements. You can't put block elements inside inline elements. */
+
+article {
+  display: none;
+  border-top: 1px solid rgba(195, 187, 187, 0.746);
+}
+
+article p {
+  line-height: 16px;
+  word-spacing: 2px;
+  text-align: left;
+  padding: 1rem;
+}

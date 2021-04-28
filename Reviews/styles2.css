@@ -1,0 +1,170 @@
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+  
+}
+
+body{
+ background-color: aqua;
+}
+/* positon mặc định của các giá trị là static  */
+
+
+main{
+ top: 50%;
+ width: 620px;
+ height:100vh;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ display: flex;
+flex-direction: column;
+align-items:center;
+margin-top: 1em;
+}
+/* However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+ */
+
+ .title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  
+ }
+
+
+main h1{
+ margin-top: 3rem;
+}
+
+.line{
+margin-top: 10px;
+margin-bottom: 1rem;
+background-color: red;
+width: 6rem;
+height:5px;
+}
+
+.container{
+margin: 0 auto;
+background-color: aliceblue;
+height: 420px;
+width: 620px;
+}
+
+
+.article{
+ word-spacing: 2px;
+display: flex;
+flex-direction: column;
+align-items:center;
+}
+
+.img{
+width: 10em;
+margin: 0 auto;
+background-color: blue;
+border-radius: 50%;
+height: 10em;
+margin-top: 10px;
+position: relative;
+}
+
+.img .after-image::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  /* \f10e là kí hiệu tượng trưng cho ,, ở đây ta không copt HTMl mà trong content ta copy unicode */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: blue;
+  color: white;
+}
+/*  tại sao ko copy <i class="fas fa-quote-right"></i> vào div mà dùng unicode \f10e và font-family 
+vì khi copy i thì sẽ phá vỡ sẽ cân bằng lên các element gần nó  */
+
+#one{
+ padding-top: 0.2em;
+ width: 10em;
+ border-radius: 50%;
+ object-fit: cover;
+ height: 10em;
+ margin-left: -12px;
+}
+
+main .container h2{
+ line-height: 2.5rem;
+ 
+}
+
+main .container .article p{
+ line-height: 25px;
+ 
+}
+.developer{
+ text-transform: uppercase;
+ color:blue;
+ align-items: center;
+}
+
+.btn{
+ margin-top: 0.5rem;
+
+}
+button{
+ border-right: 2px solid blue;
+ border-bottom: 2px solid blue;
+ border-top: 2px solid aqua;
+ border-left: 2px solid aqua;
+ padding: 0.5em;
+ border-radius: 6px;
+}
+
+.symbol .left,.right{
+  display: inline-block;
+  margin: 0.5em 1em;
+  padding: 0;
+}
+i{
+ color: blue;
+ font-size: 30px;
+ font-weight: bold;
+}
+
+/* nếu 1 div hay 1 element không được defined position thì nó default là static */
+
+@media screen and (max-width: 576px){
+ .container{
+margin: 0 auto;
+background-color: aliceblue;
+height: 30em;
+width: 25em;
+
+
+}
+main{
+ top: 50%;
+ width:100vw;
+ height:100vh;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ margin-top: 1em;
+}
+.line{
+background-color: green;
+height:2px;
+}
+
+}

@@ -1,0 +1,185 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  min-height: 100vh;
+  /* width: 100vw; */
+  background: linear-gradient(rgba(11, 175, 190, 0.6), rgba(11, 175, 190, 0.1)),
+    url('./hero-bcg.jpeg') center/cover fixed no-repeat;
+}
+/* đối với sử dụng linear-gradient bạn cần phải làm cùng 1 màu nhưng khác chỉ số hoặc khác màu nếu cùng màu sẽ tạo ra màu trằng 
+
+đối với url thứ tự phải là  center -> cover nếu không theo thứ tự cũng tạo ra màu trắng */
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  position: fixed;
+  height: 4rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header .navbar ul {
+  list-style-type: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+}
+
+header .navbar .logo1 {
+  height: 3rem;
+  width: 5rem;
+  margin-left: 2em;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: white;
+  font-weight: bolder;
+}
+
+.title h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: bolder;
+  margin: 2rem 0;
+}
+
+.title p {
+  margin: 2rem 0;
+  line-height: 1.5rem;
+}
+
+button {
+  padding: 0.5em;
+  font-size: 1em;
+  word-spacing: 0.5em;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+  background: transparent;
+  border: 2px solid rgb(243, 237, 237);
+  display: block;
+  margin: 0 auto;
+}
+
+#about,
+#service,
+#feature {
+  height: calc(100vh - 64px - 40px);
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  width: 100vw;
+}
+/* lưu ý cách sử dụng calc là phải các space giữa các dấu tính toán nếu không sẽ không có kết quả như mong muốn  */
+
+#about,
+#feature {
+  background: rgba(96, 146, 187, 0.082);
+}
+#about h1,
+#service h1,
+#feature h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+#about h1 span,
+#service h1 span,
+#feature h1 span {
+  color: green;
+}
+
+footer {
+  background: rgba(12, 81, 87, 0.959);
+  line-height: 10vh;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0;
+  width: 100%;
+}
+footer h4 {
+  line-height: 2em;
+}
+
+footer button {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  animation: bounce 2s ease-in-out infinite;
+  background: rgba(11, 175, 190);
+  border: 2px solid green;
+}
+
+footer button i {
+  font-size: 1.25rem;
+  color: white;
+  /* visibility: hidden; */
+  z-index: 100;
+}
+/* không nên đặt height and width đối với i */
+/* có thể thay thể a thay cho button cũng được  */
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.showlink {
+  background: red;
+}
+
+.showlink a {
+  color: black;
+}
+
+/* tao ra 1 ban mobile first  */

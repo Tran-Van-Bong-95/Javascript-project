@@ -1,0 +1,195 @@
+/* Mobile first */
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  word-spacing: normal;
+  background-color: whitesmoke;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+section .article {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+section .article .img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: solid 5px rgb(177, 152, 13);
+}
+
+header h1 {
+  padding: 0;
+}
+
+header .underline {
+  width: 4rem;
+  height: 3px;
+  background-color: red;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bolder;
+}
+/* align-text : chỉ dùng đối với nội dung trong div */
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+section .every .describe .title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section .every .describe .title span {
+  font-weight: bolder;
+  font-size: larger;
+  color: rgb(251, 158, 8);
+}
+
+section .article .info {
+  border-top: dotted 1px black;
+  padding: 2em 0;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 4rem 0 0 0;
+}
+
+header button {
+  border-radius: 8px;
+  border: solid 2px rgb(109, 109, 13);
+  border-right: solid 2px rgb(205, 50, 179);
+  border-bottom: solid 2px rgb(205, 50, 171);
+  margin: 0 0 0 10px;
+}
+
+button a {
+  display: block;
+  text-decoration: none;
+  padding: 6px 10px;
+}
+
+button:hover {
+  background-color: yellowgreen;
+}
+@media screen and (min-width: 753px) {
+  .clearfix {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  section .article {
+    /* margin: 0 5em; */
+    width: 80vw;
+  }
+  section .article .img {
+    width: 35%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: solid 5px rgb(177, 152, 13);
+    float: left;
+    margin-top: 3em;
+    margin-right: 10px;
+  }
+
+  section .every {
+    width: 60%;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+  }
+  section .every .describe {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  section .every .describe .title {
+    position: relative;
+  }
+
+  section .every .describe .title span {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  section .every .info {
+    border-top: dotted 1px black;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1194px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 10px;
+    padding: 0 3rem;
+    padding-right: 3rem;
+    width: 95vw;
+  }
+
+  section .article {
+    width: 40rem;
+  }
+
+  section .article .img {
+    width: 225px;
+    height: 160px;
+    border-radius: 10px;
+    border: solid 5px rgb(177, 152, 13);
+    float: left;
+    margin: 10px 15px;
+  }
+
+  section .article .every {
+    width: 324px;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  section .every .describe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    /* width: 324px; */
+  }
+
+  section .article .every .describe .title {
+    width: 100%;
+  }
+
+  section .article .info {
+    border-top: dotted 1px black;
+    text-align: justify;
+  }
+  /*  tại sao every không được ứng dụng style nhỉ  */
+}

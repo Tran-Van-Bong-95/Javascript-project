@@ -1,0 +1,103 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+ background: url(./hero.jpeg);
+ background-size: cover;
+ background-position-y: -25vh;
+}
+
+.special{
+position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: white;
+ width: 488px;
+ height: 264px;
+ border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center; 
+ z-index: 2;
+
+}
+
+.special h1{
+ text-transform: capitalize;
+ font-weight: bold;
+ font-size: 3rem;
+ margin: 40px;
+}
+
+.special #btn{
+ padding: 8px 0;
+ width: 13em;
+ border-radius: 10px;
+ color: red;
+ background-color: aqua;
+}
+
+.special #btn:hover{
+ background-color: white;
+ color: blue;
+}
+
+/*  scale 2 when hovering  */
+
+
+#inner{
+ position:absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: white;
+ width: 488px;
+ height: 200px;
+ border-radius: 10px;
+ z-index: 1;
+ text-align: center;
+}
+
+.show-inner{
+ z-index: -1;
+}
+
+#hay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(73, 166, 233, 0.5);
+  transition: all 0.3s linear;
+  /* visibility: hidden; */
+  z-index: 0;
+}
+
+#inner h1{
+ text-transform: capitalize;
+ width: 100%;
+ margin-top: 5em;
+}
+
+#inner .close{
+ position: absolute;
+ color: red;
+ border: transparent;
+ float: right;
+ margin-right: 1em;
+ top: 10px;
+ right: 0;
+}
+
+.close:hover{
+transition: transform linear 0.5s;
+transform: scale(2);
+}
+
+/* Mobile */
