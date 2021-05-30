@@ -1,12 +1,4 @@
-/*
-tạo ra object
- get days
- get months
- get years
- get seconds
 
- Xem như đây là 1 bài kiểm tra độ hiểu biết và các sử dụng date Object
-*/
 
 const weekdays = 
   [
