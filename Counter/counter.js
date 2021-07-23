@@ -6,7 +6,7 @@ const number1 = document.querySelector('#number');
 let number = 0;
 
  decrease.addEventListener('click',function(){
-  number++;
+  number--;
   number1.textContent = number;
   if(number > 0){
    number1.style.color = 'green';
@@ -24,7 +24,7 @@ let number = 0;
  });
 
  increase.addEventListener('click', function(){
-  number--;
+  number++;
   number1.textContent = number;
   if(number > 0){
    number1.style.color = 'green';

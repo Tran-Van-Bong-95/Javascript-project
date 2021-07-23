@@ -30,7 +30,6 @@ increase.addEventListener('click', function(){
 decrease.addEventListener('click', function(){
  current_Number--;
  number.textContent = current_Number;
-
 });
 
 const button = document.querySelector('.button1');
@@ -38,9 +37,11 @@ let show_text = document.querySelector('.show_text');
 
 button.addEventListener('click', function(){
  show_text.textContent = ``;
- if(current_Number <= 0){
-  show_text.textContent = ``;
- }
+
+//  if(current_Number <= 0){
+//   show_text.textContent = ``;
+//  }
+
   for(let i = 1; i<=current_Number; i++){
     var text = document.createElement('p');
    text.textContent = pharagraph[i-1];

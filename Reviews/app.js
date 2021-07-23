@@ -64,7 +64,6 @@ function showPerson(person){
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.info;
-
 }
 
 // next Person
