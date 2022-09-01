@@ -1,0 +1,95 @@
+// Phân tích bài toán todolist React 
+
+[{
+checked: false,
+day: ,
+date: ,
+time: ,
+projectName: ,
+text: '',
+}, 
+{
+checked: false,
+day: ,
+date: ,
+time: ,
+projectName: ,
+text: '',
+},
+{
+checked: false,
+day: ,
+date: ,
+time: ,
+projectName: ,
+text: '',
+},
+}]
+
+Understand firebase :
+/*
+1. Listen to doc changes 
+firebase
+.firestore()
+.collection('todos')
+.doc('5iaSiUI7LRE5mvzI4xRL)  // specific doc
+.onSnapshot((doc) => {
+  console.log('Current data:', doc.data())
+})
+
+
+2. Listen to whole collection changes 
+firebase
+.firestore()
+.collection('todos')
+.onSnapshot((snapshot) => {
+  snapshot.docs //  general doc => this is an array
+})
+
+Chúng ta có thể nghĩ collection như 1 folder chứa nhiều document và data thì 
+là fields in that document 
+Hoặc bạn có thể nghĩ collection như 1 array trong javascript như todos
+và trong collection đó có nhiều object là document 
+
+firebase.firestore() để tạo database 
+collection nằm trong database 
+
+- để listen to doc bạn cần thêm 1 event là .onSnapshot nên bất kỳ sự thay đổi nào
+ở doc nó sẽ fire up 1 functon onSnapshot((doc) => {
+// do whatever you want with new data
+doc.data() sẽ trả 1 object như document 
+})
+
+- để nghe toàn bộ sự thay đổi của collection mục 2 ở trên 
+
+// all of this is a side effect so we need to use useEffect 
+*/
+
+firebase ==> add, remove, edit 
+Cấu trúc:
+<Sidebar> 
+	<Login/>
+	<AddNewToDo/>	==> quan tâm đến Modal
+	<Calendar/>	==> quan tâm đến setProject
+	<Projects/>
+</Sidebar>
+
+<Main>
+	<Todos/>
+	<EditToDo/>
+</Main>
+
+Đào sâu từng component và các mối liên hệ giữa từng component
+bài toán đặt ra , cách giải quyết 
+<AddNewToDo>
+	<Modal>
+	<Form/>
+	</Modal>
+</AddNewToDo>
+
+<Form/> 
+Kiểm tra xem dữ liệu có trùng không nếu trùng thì alert
+Nếu không thêm vào rồi đặt lại mặc định như ban đầu  
+
+
+

@@ -6,11 +6,11 @@
 
 body {
   line-height: 1.5;
-  background: rgba(233, 227, 227, 0.904);
+  background: white;
 }
 
 .section-center {
-  background: rgb(250, 243, 243);
+  background: rgb(248, 248, 248);
   border-radius: 10px;
   display: flex;
   position: absolute;
